@@ -1,9 +1,9 @@
 package domain
 
 import (
-	"github.com/rastasi/learn-golang/crud/domain/repository"
-	"github.com/rastasi/learn-golang/crud/domain/service"
-	"github.com/rastasi/learn-golang/crud/lib/database"
+	"github.com/rastasi/go-crud/domain/repository"
+	"github.com/rastasi/go-crud/domain/service"
+	"github.com/rastasi/go-crud/lib/database"
 )
 
 type Domain struct {

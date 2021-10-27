@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/rastasi/learn-golang/crud/domain/service"
-	"github.com/rastasi/learn-golang/crud/lib/utils"
+	"github.com/rastasi/go-crud/domain/service"
+	"github.com/rastasi/go-crud/lib/utils"
 )
 
 type AlbumControllerInterface interface {

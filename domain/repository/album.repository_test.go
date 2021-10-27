@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/rastasi/learn-golang/crud/domain/repository"
-	"github.com/rastasi/learn-golang/crud/lib/test"
+	"github.com/rastasi/go-crud/domain/repository"
+	"github.com/rastasi/go-crud/lib/test"
 )
 
 func TestAlbumRepositoryCreate(t *testing.T) {

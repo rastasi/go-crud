@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/rastasi/learn-golang/crud/http/controller"
+	"github.com/rastasi/go-crud/http/controller"
 )
 
 type AlbumRouter struct {

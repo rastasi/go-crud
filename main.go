@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/rastasi/learn-golang/crud/domain"
-	"github.com/rastasi/learn-golang/crud/http"
+	"github.com/rastasi/go-crud/domain"
+	"github.com/rastasi/go-crud/http"
 )
 
 func main() {

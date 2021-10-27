@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rastasi/learn-golang/crud/domain/model"
+	"github.com/rastasi/go-crud/domain/model"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

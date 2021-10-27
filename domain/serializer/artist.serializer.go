@@ -1,6 +1,6 @@
 package serializer
 
-import "github.com/rastasi/learn-golang/crud/domain/model"
+import "github.com/rastasi/go-crud/domain/model"
 
 type Artist struct {
 	ID     uint   `json:"id"`

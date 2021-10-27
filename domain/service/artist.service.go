@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/rastasi/learn-golang/crud/domain/model"
-	"github.com/rastasi/learn-golang/crud/domain/repository"
-	"github.com/rastasi/learn-golang/crud/domain/serializer"
+	"github.com/rastasi/go-crud/domain/model"
+	"github.com/rastasi/go-crud/domain/repository"
+	"github.com/rastasi/go-crud/domain/serializer"
 )
 
 type ArtistServiceCreateParams struct {

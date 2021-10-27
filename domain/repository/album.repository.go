@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/rastasi/learn-golang/crud/domain/model"
+	"github.com/rastasi/go-crud/domain/model"
 	"gorm.io/gorm"
 )
 

@@ -1,4 +1,4 @@
-module github.com/rastasi/learn-golang
+module github.com/rastasi/go-crud
 
 go 1.17
 
