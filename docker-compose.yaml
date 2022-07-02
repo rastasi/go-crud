@@ -1,4 +1,4 @@
-version: "3.2"
+version: "2.1"
     
 services:
   mysql:
@@ -13,6 +13,10 @@ services:
       MYSQL_DATABASE: database
       MYSQL_USER: user
       MYSQL_PASSWORD: password
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
     networks:
       inner:
         aliases:
@@ -33,13 +37,18 @@ services:
       - "8000:8000"
     expose:
       - "8000"
+    dns:
+      - "8.8.8.8"
     networks:
       inner:
         aliases:
           - crud
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
 networks:
-  inner: {}
+  inner:
+    driver: bridge
+
 volumes:
   db_data: {}
