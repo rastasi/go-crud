@@ -7,13 +7,19 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/rastasi/go-crud/domain"
 	"github.com/rastasi/go-crud/http/controller"
+	"github.com/rastasi/go-crud/http/middleware"
 	"github.com/rastasi/go-crud/http/router"
 	"github.com/rastasi/go-crud/lib/utils"
 )
 
 func StartHttpServer(domain domain.Domain) {
 	r := mux.NewRouter()
+
 	r.StrictSlash(false)
+
+	r.Use(middleware.LoggingMiddleware)
+	r.Use(middleware.OpenAPIMiddleware)
+
 	utils.AddRouter(r, "/albums", *router.AlbumRouter{
 		AlbumController: controller.AlbumController{
 			AlbumService: domain.AlbumService,

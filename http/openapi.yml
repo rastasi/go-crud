@@ -1,0 +1,124 @@
+openapi: 3.1.0
+info:
+  title: CRUD Example
+  version: 1.0.0
+paths:
+  /artists/:
+    get:
+      description: List artists
+      responses:
+        '200':
+          description: A JSON array of artists
+    post:
+      description: Create artist
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/Artist'
+      responses:
+        '201':
+          description: Created
+  /artists/{id}:
+    get:
+      description: Get artist
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A JSON objet of artist
+    put:
+      description: Modify artist
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/Artist'
+      responses:
+        '200':
+          description: Modified
+    delete:
+      description: Delete artist
+      responses:
+        '200':
+          description: Deleted
+  /albums/:
+    get:
+      description: List albums
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A JSON array of albums
+    post:
+      description: Create album
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/Album'
+      responses:
+        '201':
+          description: Created
+  /albums/{id}:
+    get:
+      description: Get album
+      responses:
+        '200':
+          description: A JSON objet of album
+    put:
+      description: Modify album
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/Album'
+      responses:
+        '200':
+          description: Modified
+    delete:
+      description: Delete album
+      responses:
+        '200':
+          description: Deleted
+components:
+  Artist:
+    type: object
+    properties:
+      ID:
+        type: integer
+      Name:
+        type: string
+      Active:
+        type: integer
+  Album:
+    type: object
+    properties:
+      ID:
+        type: integer
+      Title:
+        type: string
+      Artist:
+        type: string
+      Active:
+        type: integer
